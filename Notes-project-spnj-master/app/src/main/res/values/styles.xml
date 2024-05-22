@@ -1,0 +1,20 @@
+<resources>
+    <style name="Title" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomStart">25dp</item>
+        <item name="boxBackgroundColor">@color/colorPrimary</item>
+        <item name="boxStrokeColor">@color/ColorGreenNote</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="Deskripsi" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="boxCornerRadiusTopEnd">25dp</item>
+        <item name="boxBackgroundColor">@color/colorPrimary</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxStrokeWidth">5dp </item>
+        <item name="boxStrokeColor">@color/ColorGreenNote</item>
+    </style>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="10dp"
+    app:cardBackgroundColor="@color/ColorLightBlack"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_row"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/nama_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@id/kelas_row"
+            app:layout_constraintStart_toEndOf="@id/image_row"
+            app:layout_constraintTop_toTopOf="@id/image_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Nama" />
+
+        <TextView
+            android:id="@+id/kelas_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textColor="@color/ColorGray"
+            app:layout_constraintBottom_toBottomOf="@id/image_row"
+            app:layout_constraintStart_toEndOf="@id/image_row"
+            app:layout_constraintTop_toTopOf="@id/nama_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Detail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

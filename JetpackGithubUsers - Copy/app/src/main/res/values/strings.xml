@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">JetpackGithubUsers</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_favorite">Favorites</string>
+    <string name="menu_profile">Profile</string>
+    <string name="favorited_user">Favorite User</string>
+
+    <string name="user_id">User ID : %d</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+    <string name="minus_symbol">—</string>
+    <string name="plus_symbol">＋</string>
+    <string name="add_to_favorite">Tambah ke Favorite</string>
+    <string name="total_order">Total pesanan : %d Pts</string>
+    <string name="back">Back</string>
+    <string name="dicoding_reward">Dicoding Reward</string>
+    <string name="share_message">Hey, I have redeem %1$d rewards in Dicoding with total %2$d Points. Do you want too?</string>
+
+    <string name="scroll_to_top">Scroll to Top</string>
+    <string name="search_user">Cari user</string>
+    <string name="placeholder_search">Search</string>
+</resources>

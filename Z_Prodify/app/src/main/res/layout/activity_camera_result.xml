@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.camera.CameraResultActivity">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/offwhite"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finalize_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_camera_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/product_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp"
+                android:background="@drawable/detail_bg"
+                android:padding="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_camera_result">
+
+                <com.c23ps105.prodify.ui.customview.ProdifyTextView
+                    android:id="@+id/tv_category_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_enabled"
+                    android:padding="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/category" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_bookmark"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/bookmark"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_category_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_category_white" />
+
+                <com.c23ps105.prodify.ui.customview.ProdifyTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/monbold"
+                    android:text="Judul"
+                    android:textColor="@color/black200"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_category_white"
+                    app:layout_constraintTop_toBottomOf="@id/tv_category_white" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_copy_title"
+                    android:layout_width="18sp"
+                    android:layout_height="18sp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_copy"
+                    app:layout_constraintBottom_toBottomOf="@+id/title"
+                    app:layout_constraintStart_toEndOf="@+id/title"
+                    app:layout_constraintTop_toTopOf="@+id/title" />
+
+                <com.c23ps105.prodify.ui.customview.ProdifyEditTextView
+                    android:id="@+id/edt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pnregular"
+                    android:hint="Product Title"
+                    android:inputType="textMultiLine"
+                    android:paddingHorizontal="0dp"
+                    android:textColor="@color/black600"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+                <com.c23ps105.prodify.ui.customview.ProdifyTextView
+                    android:id="@+id/desc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/monbold"
+                    android:text="Deksripsi"
+                    android:textColor="@color/black200"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/edt_title"
+                    app:layout_constraintTop_toBottomOf="@id/edt_title" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ic_copy_description"
+                    android:layout_width="18sp"
+                    android:layout_height="18sp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_copy"
+                    app:layout_constraintBottom_toBottomOf="@+id/desc_title"
+                    app:layout_constraintStart_toEndOf="@+id/desc_title"
+                    app:layout_constraintTop_toTopOf="@+id/desc_title" />
+
+                <com.c23ps105.prodify.ui.customview.ProdifyEditTextView
+                    android:id="@+id/edt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pnregular"
+                    android:hint="Product Description"
+                    android:inputType="textMultiLine"
+                    android:paddingHorizontal="0dp"
+                    android:textColor="@color/black600"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/desc_title" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_finalize_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/offwhite"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.c23ps105.prodify.ui.customview.ProdifyButton
+            android:id="@+id/btn_finalize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan Produk" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_pure"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-150dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_animation" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-150dp"
+            android:fontFamily="@font/monbold"
+            android:text="Prodify Lagi Mikir"
+            android:textAlignment="center"
+            android:textColor="@color/black600"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/pnregular"
+            android:text="Sebentar ya, Prodify lagi mikirin judul dan deskripsi terbaik untuk produk kamu."
+            android:textAlignment="center"
+            android:textColor="@color/black200"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/custom_edit_text"
+            android:fontFamily="@font/monbold"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="10dp"
+            android:text=" 0 1 : 0 0 "
+            android:textAlignment="center"
+            android:textColor="@color/black600"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

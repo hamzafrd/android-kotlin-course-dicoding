@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">About</string>
+    <string name="nama">Nama</string>
+    <string name="umur">Umur</string>
+    <string name="alamat">Alamat</string>
+    <string name="kelas_dicoding">Kelas Dicoding</string>
+    <string name="lorem_impus">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Morbi mattis porta eleifend. Nullam quis malesuada lorem.
+        Curabitur lacinia euismod tellus, eget suscipit nibh semper nec.
+        Ut non lacus pharetra, dignissim augue sed, blandit leo.
+        Phasellus iaculis nibh sed risus convallis lobortis. Duis mattis mi lectus, nec tincidunt nisi rutrum et.
+        Quisque ultrices enim urna, a varius ipsum cursus vel. Sed id porttitor nulla. </string>
+    <string name="arnold">Arnold</string>
+    <string name="hamza_firdaus">Hamza Firdaus</string>
+    <string name="ghozali">Albert Waseda</string>
+    <string name="about">About Us</string>
+    <string name="hobby">Hobby</string>
+    <string name="explore_our_team_leader">Team Leader</string>
+    <string name="hamza">Hamza Firdaus</string>
+    <string name="hamzaf625_gmail_com">Hamzaf625@gmail.com</string>
+    <string name="albert_waseda">Albert Waseda</string>
+    <string name="albert5551_gmail_com">albert5551_gmail_com</string>
+    <string name="arnold_prakoso">Arnold Prakoso</string>
+    <string name="arnold1101_gmail_com">arnold1101@gmail.com</string>
+    <string name="developer_hamza_firdaus">Developer : Hamza Firdaus</string>
+    <string name="about_me">About me</string>
+</resources>

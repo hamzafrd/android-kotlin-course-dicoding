@@ -1,0 +1,24 @@
+version: '3.5'
+
+
+services:
+  kotlin-restful-api-postgres:
+    container_name: "postgres-kotlin-restful-api"
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: kotlin
+      POSTGRES_USER: kotlin
+      POSTGRES_DB: postgres-kotlin-restful-api
+
+  kotlin-restful-api-mysql:
+    container_name: "mysql-kotlin-restful-api"
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql-kotlin-restful-api
+      MYSQL_USER: kotlin
+      MYSQL_PASSWORD: kotlin

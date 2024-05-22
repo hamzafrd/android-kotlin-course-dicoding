@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_layout">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image_student"
+                android:layout_width="200dp"
+                android:layout_height="270dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="15dp"
+                tools:ignore="ImageContrastCheck"
+                tools:src="@drawable/sy3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/image_student"
+                android:layout_alignBottom="@id/image_student"
+                android:layout_toEndOf="@id/image_student"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/nama_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorWhiteNote"
+                    tools:text="Hamza Firdaus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/umur"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/umur_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorWhiteNote"
+                    tools:text="20 Tahun" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alamat"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/alamat_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorWhiteNote"
+                    tools:text="Jakarta" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kelas_dicoding"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/kelas_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/ColorWhiteNote"
+                    tools:text="Android Developer" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_explore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/explore_our_team_leader"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/arnold"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arnolt"
+                app:layout_constraintEnd_toStartOf="@+id/hamza"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_explore"
+                app:riv_corner_radius="15dp"
+                tools:layout_editor_absoluteY="69dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/hamza"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sy3"
+                app:layout_constraintEnd_toStartOf="@id/albert"
+                app:layout_constraintStart_toEndOf="@id/arnold"
+                app:layout_constraintTop_toTopOf="@id/arnold"
+                app:riv_corner_radius="15dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/albert"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/albert"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/hamza"
+                app:layout_constraintTop_toTopOf="@id/arnold"
+                app:riv_corner_radius="15dp" />
+
+            <TextView
+                android:id="@+id/team1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/arnold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/arnold"
+                app:layout_constraintStart_toStartOf="@id/arnold"
+                app:layout_constraintTop_toBottomOf="@id/arnold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/hamza_firdaus"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/hamza"
+                app:layout_constraintStart_toStartOf="@id/hamza"
+                app:layout_constraintTop_toBottomOf="@id/hamza" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ghozali"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/albert"
+                app:layout_constraintStart_toStartOf="@id/albert"
+                app:layout_constraintTop_toBottomOf="@id/albert" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/hobby"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/ColorPurpleNote"
+                tools:text="Basketball" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/ColorGreenNote"
+                tools:text="Video Games" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/ColorBlue"
+                android:textColor="#BBDEFB"
+                tools:text="Badminton" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_impus"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</ScrollView>

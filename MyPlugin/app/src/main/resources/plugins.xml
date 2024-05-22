@@ -1,0 +1,17 @@
+<idea-plugin>
+    <id>com.inovego.myplugin</id>
+    <name>MyPlugin</name>
+    <version>1.0</version>
+    <vendor email="info@example.com" url="https://example.com">Your Company</vendor>
+    <description><![CDATA[
+        This is my custom Android Studio plugin for catLog.
+    ]]></description>
+
+    <actions>
+        <group id="MyPluginGroup" text="My Plugin">
+            <action id="CatAction" class="com.inovego.myplugin.CatAction" text="Cat Log" description="Cat Log" enabled="true">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift X" second-keystroke="ctrl shift C"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>

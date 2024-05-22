@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PokemonRecycleView</string>
+    <string name="pokemon_s_picture">Pokemon\'s Picture</string>
+</resources>

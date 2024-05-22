@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.c23ps105.prodify.ui.main.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_detail_result"
+            app:destination="@id/navigation_detail_result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_article"
+        android:name="com.c23ps105.prodify.ui.main.blogs.BlogsFragment"
+        android:label="@string/title_blogs"
+        tools:layout="@layout/fragment_blogs" >
+        <action
+            android:id="@+id/action_navigation_article_to_navigation_detail_result"
+            app:destination="@id/navigation_detail_result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.c23ps105.prodify.ui.main.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_detail_result"
+            app:destination="@id/navigation_detail_result" />
+        <action
+            android:id="@+id/action_navigation_profile_to_authActivity2"
+            app:destination="@id/authActivity2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_result"
+        android:name="com.c23ps105.prodify.ui.main.result.ResultFragment"
+        android:label="result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_detail_result"
+            app:destination="@id/navigation_detail_result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_result"
+        android:name="com.c23ps105.prodify.ui.main.detail.DetailResultFragment"
+        android:label="DetailResult"
+        tools:layout="@layout/fragment_detail_result"/>
+    <activity
+        android:id="@+id/authActivity2"
+        android:name="com.c23ps105.prodify.ui.auth.AuthActivity"
+        android:label="activity_auth"
+        tools:layout="@layout/activity_auth" />
+</navigation>

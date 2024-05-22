@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.profile.ProfileFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/account_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black600"
+            android:textSize="18sp"
+            android:fontFamily="@font/monbold"
+            android:text="@string/prodify" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black600"
+            android:fontFamily="@font/pnregular"
+            android:includeFontPadding="false"
+            android:text="@string/email_prodify" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ic_logout"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="@string/avatar"
+        android:src="@drawable/sign_out_squre"
+        app:layout_constraintBottom_toBottomOf="@+id/account_information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/account_information" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/black500"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@id/ic_logout"
+        app:layout_constraintStart_toStartOf="@id/account_information"
+        app:layout_constraintTop_toBottomOf="@id/account_information">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="@string/discover"
+            android:fontFamily="@font/pnregular"
+            android:includeFontPadding="false"
+            android:textColor="@color/white_pure" />
+    </androidx.cardview.widget.CardView>
+
+    <com.c23ps105.prodify.ui.customview.ProdifyTextView
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/bookmark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/card"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/card"
+        app:layout_constraintTop_toBottomOf="@id/bookmark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:spanCount="2"
+        tools:listitem="@layout/item_staggered_grid" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

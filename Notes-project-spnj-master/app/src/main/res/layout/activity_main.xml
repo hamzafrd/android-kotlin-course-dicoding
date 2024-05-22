@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appName_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/notes"
+        android:textColor="@color/ColorWhite"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName_main"
+        app:spanCount="2"
+        tools:listitem="@layout/list_recycle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDeleteList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_twotone_delete_sweep_24"
+            app:backgroundTint="@color/ColorOrangeNote"
+            app:tint="@color/white"
+            tools:ignore="ImageContrastCheck" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCreateNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_add_note"
+            app:backgroundTint="@color/ColorOrangeNote"
+            app:tint="@color/white"
+            tools:ignore="ImageContrastCheck" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

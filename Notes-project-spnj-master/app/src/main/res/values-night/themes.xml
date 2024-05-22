@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Notes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ColorOrangeNote</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorOrangeNote</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ColorBlue</item>
+        <item name="colorSecondaryVariant">@color/colorPrimary</item>
+        <item name="colorOnSecondary">@color/ColorLightBlack</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
